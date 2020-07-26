@@ -1,9 +1,8 @@
 import sys, getopt
-import codecs
 import convData as data
 
 def convertChar(c):
-    # Rules are remove psili and varia
+    # Rules are: remove psili and varia
     # Macron and vrachy are extra but don't really matter
     if not (c in data.convDictoDescr.keys()):
         return c
@@ -19,8 +18,8 @@ def convertChar(c):
 
 
 def convertFile(inputFilePath, outputFilePath):
-    with codecs.open(inputFilePath, "r", encoding='utf-8') as inputFile:
-        with codecs.open(outputFilePath, "w+", encoding='utf-8') as outputFile:
+    with open(inputFilePath, "r", encoding='utf-8') as inputFile:
+        with open(outputFilePath, "w+", encoding='utf-8') as outputFile:
             for line in inputFile:
                 for c in line:
                     cc=convertChar(ord(c))
