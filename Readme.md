@@ -3,6 +3,9 @@
 This is a script that converts ancient greek to "middle" greek. 
 Middle is a version between modern (koine) greek and ancient greek language that I propose myself to be adopted by everyone that uses modern greek.
 	
+## Usage
+	python convert.py -i <inputfile> -o <outputfile>
+	
 ## Proposition
 
 * Use the Circumflex accent (perispomene)
